@@ -26,8 +26,3 @@ public class ExampleInstrumentedTest {
         assertEquals("com.example.maslick.helloworld", appContext.getPackageName());
     }
 }
-
-@Data
-class Helloworld {
-    String abd;
-}

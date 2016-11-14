@@ -3,6 +3,8 @@ package com.example.maslick.helloworld;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import lombok.Data;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -10,4 +12,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    @Data
+    class Helloworld {
+        String abd;
+    }
+
 }
