@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Heartman</string>
     <string name="header">Hello world, people!!!</string>
+    <string name="stopSpinner">Stop spinner</string>
+    <string name="startSpinner">Start spinner</string>
+    <string name="toggleSpinner">Toggle</string>
+
 </resources>
