@@ -14,21 +14,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-
-        Button button = (Button) findViewById(R.id.showHahaBtn);
-        button.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Intent nextScreen = new Intent(getApplicationContext(), HahaActivity.class);
-                startActivity(nextScreen);
-            }
-        });
     }
 
     @Data
     class Helloworld {
         String abd;
+    }
+
+    public void clickMe(View view) {
+        Intent i = new Intent(this, HahaActivity.class);
+        startActivity(i);
     }
 
 }
