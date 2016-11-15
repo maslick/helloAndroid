@@ -44,21 +44,8 @@ public class HahaActivity extends AppCompatActivity {
     };
 
     public void toggleBtn(View view) {
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                long futuretime = System.currentTimeMillis() + 10;
-                while (System.currentTimeMillis() < futuretime) {
-                    synchronized (this) {
-                        try {
-                            wait(futuretime - System.currentTimeMillis());
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-                handler.sendEmptyMessage(0);
-            }
+        Runnable runnable = () -> {
+            handler.sendEmptyMessage(0);
         };
 
         Thread myThread = new Thread(runnable);
