@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.NotificationCompat;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +26,7 @@ public class HahaActivity extends AppCompatActivity {
 
     NotificationCompat.Builder notification;
     private static int uniqueID = 12345;
+    private static final String TAG = "heartman";
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +66,8 @@ public class HahaActivity extends AppCompatActivity {
                 isSpinning = !isSpinning;
                 toast("not spinning...");
                 notifyy("Heartman", "not spinning", "not spinning...");
+                System.out.println("not spinning");
+                Log.d(TAG, "not spinning");
             }
             else {
                 progressBar.setVisibility(View.VISIBLE);
@@ -71,6 +75,8 @@ public class HahaActivity extends AppCompatActivity {
                 isSpinning = !isSpinning;
                 toast("spinning...");
                 notifyy("Heartman", "spinning", "spinning...");
+                System.out.println("spinning");
+                Log.d(TAG, "spinning");
             }
         }
     };
